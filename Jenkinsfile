@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'podman' }
 
     tools {
         maven 'M3'
