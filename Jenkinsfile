@@ -33,7 +33,7 @@ pipeline {
                     def mods = SERVICES.split(',')
                     mods.each { mod ->
                         sh """
-                            docker build -t ${ECR_REPO_PREFIX}/${mod}:latest \\
+                            podman build -t ${ECR_REPO_PREFIX}/${mod}:latest \\
                                       -f ${mod}/Dockerfile ${mod}
                         """
                     }
