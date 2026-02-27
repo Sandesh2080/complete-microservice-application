@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build JARs') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                sh 'mvn -f api-gateway/pom.xml clean install'
             }
         }
 
