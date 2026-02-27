@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven 3.8.1'
+    }
+
     environment {
         AWS_ACCOUNT_ID   = "${env.AWS_ACCOUNT_ID}"    // configure in job or via parameters
         AWS_REGION       = "${env.AWS_REGION ?: 'us-east-1'}"
