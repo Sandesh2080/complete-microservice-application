@@ -24,14 +24,8 @@ pipeline {
         stage('Build JARs') {
             steps {
                 sh 'mvn -f api-gateway/pom.xml clean install'
-            }
-            steps {
                 sh 'mvn -f offer-service/pom.xml clean install'
-            }
-            steps {
                 sh 'mvn -f product-service/pom.xml clean install'
-            }
-            steps {
                 sh 'mvn -f service-registry/pom.xml clean install'
             }
         }
